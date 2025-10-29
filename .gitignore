@@ -1,0 +1,12 @@
+# Ignore DVC cache and large data
+/.dvc/cache/
+*.csv
+*.pkl
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment
+.env
+venv/
