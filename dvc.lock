@@ -32,3 +32,23 @@ stages:
       hash: md5
       md5: bb3c7067d16a3706e2a32400a2ba2c9c
       size: 3372928
+  train:
+    cmd: python src/pipelines/train_pipeline.py
+    deps:
+    - path: data/features/housing_features.csv
+      hash: md5
+      md5: bb3c7067d16a3706e2a32400a2ba2c9c
+      size: 3372928
+    - path: src/pipelines/train_pipeline.py
+      hash: md5
+      md5: cf1c39671a6de1c234300d590cc39e66
+      size: 3710
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 9dda1fe9f31ce2641c0624b3d52d865e
+      size: 51
+    - path: model/linear_regression_model.pkl
+      hash: md5
+      md5: c9712409b0f4ca6fac2e2995488bb362
+      size: 144254481
