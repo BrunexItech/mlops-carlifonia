@@ -1,0 +1,10 @@
+artifact_location: file:///home/bruno-sharrix/Documents/mlops_boston/mlruns/266280558537555749/models/m-5767dd9896cb4f02a0561e1240231773/artifacts
+creation_timestamp: 1761765191327
+experiment_id: '266280558537555749'
+last_updated_timestamp: 1761765198656
+model_id: m-5767dd9896cb4f02a0561e1240231773
+model_type: null
+name: best_model
+source_run_id: cf3a9f1d583f42febab5a8508d9434e2
+status: 2
+status_message: null

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/bruno-sharrix/Documents/mlops_boston/mlruns/266280558537555749/a1e65bbc652d42349aa22a31eb5324c4/artifacts
+end_time: 1761818145822
+entry_point_name: ''
+experiment_id: '266280558537555749'
+lifecycle_stage: active
+run_id: a1e65bbc652d42349aa22a31eb5324c4
+run_name: Complete_pipeline_run
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761818064184
+status: 3
+tags: []
+user_id: bruno-sharrix

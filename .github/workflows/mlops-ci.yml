@@ -1,0 +1,39 @@
+# .github/workflows/mlops-ci.yml
+
+name: MLOps CI Pipeline
+
+# WHEN TO RUN: When code is pushed to main branch or pull request is made
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # STEP 1: Get the code from GitHub
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # STEP 2: Setup Python environment
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    # STEP 3: Install required packages
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    # STEP 4: Run the complete ML pipeline
+    - name: Run ML pipeline
+      run: python src/pipelines/train_pipeline.py
+
+    # STEP 5: Save the trained model
+    - name: Save model artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: house-price-model
+        path: model/linear_regression_model.pkl

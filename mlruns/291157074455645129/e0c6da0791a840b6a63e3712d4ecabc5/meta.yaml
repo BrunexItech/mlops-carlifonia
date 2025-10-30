@@ -1,0 +1,14 @@
+artifact_uri: file:///home/bruno-sharrix/Documents/mlops_boston/mlruns/291157074455645129/e0c6da0791a840b6a63e3712d4ecabc5/artifacts
+end_time: 1761764743314
+entry_point_name: ''
+experiment_id: '291157074455645129'
+lifecycle_stage: active
+run_id: e0c6da0791a840b6a63e3712d4ecabc5
+run_name: zealous-sheep-58
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761764743301
+status: 3
+tags: []
+user_id: bruno-sharrix

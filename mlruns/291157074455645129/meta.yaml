@@ -1,0 +1,6 @@
+artifact_location: file:///home/bruno-sharrix/Documents/mlops_boston/mlruns/291157074455645129
+creation_time: 1761764742898
+experiment_id: '291157074455645129'
+last_update_time: 1761764742898
+lifecycle_stage: active
+name: test_experiment

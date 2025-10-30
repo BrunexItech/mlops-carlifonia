@@ -1,0 +1,6 @@
+artifact_location: file:///home/bruno-sharrix/Documents/mlops_boston/mlruns/266280558537555749
+creation_time: 1761765170801
+experiment_id: '266280558537555749'
+last_update_time: 1761765170801
+lifecycle_stage: active
+name: California_Housing_Regression
