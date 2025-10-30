@@ -1,0 +1,22 @@
+artifact_path: file:///home/bruno-sharrix/Documents/mlops_boston/mlruns/266280558537555749/models/m-5d9ec6404ac7489da8e9d5e91ce1263d/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.5.1
+model_id: m-5d9ec6404ac7489da8e9d5e91ce1263d
+model_size_bytes: 144249363
+model_uuid: m-5d9ec6404ac7489da8e9d5e91ce1263d
+prompts: null
+run_id: c563191a64e244018ea384e513657b40
+utc_time_created: '2025-10-30 14:48:58.022550'

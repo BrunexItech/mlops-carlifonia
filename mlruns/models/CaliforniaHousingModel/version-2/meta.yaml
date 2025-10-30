@@ -1,0 +1,15 @@
+creation_timestamp: 1761835740591
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1761835740591
+model_id: m-5d9ec6404ac7489da8e9d5e91ce1263d
+name: CaliforniaHousingModel
+run_id: c563191a64e244018ea384e513657b40
+run_link: null
+source: models:/m-5d9ec6404ac7489da8e9d5e91ce1263d
+status: READY
+status_message: null
+storage_location: file:///home/bruno-sharrix/Documents/mlops_boston/mlruns/266280558537555749/models/m-5d9ec6404ac7489da8e9d5e91ce1263d/artifacts
+user_id: null
+version: 2

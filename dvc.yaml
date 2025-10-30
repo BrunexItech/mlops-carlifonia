@@ -1,0 +1,28 @@
+
+stages:
+  prepare:
+    cmd: python src/data_cleaning.py
+    deps:
+      - src/data_cleaning.py
+      - data/raw/housing.csv
+    outs:
+      - data/processed/housing_clean.csv
+
+  featurize:
+    cmd: python src/feature_engineering.py
+    deps:
+      - src/feature_engineering.py
+      - data/processed/housing_clean.csv
+    outs:
+      - data/features/housing_features.csv
+
+  train:
+    cmd: python src/pipelines/train_pipeline.py
+    deps:
+      - src/pipelines/train_pipeline.py
+      - data/features/housing_features.csv
+    outs:
+      - model/linear_regression_model.pkl
+    metrics:
+      - metrics.json:
+          cache: false
