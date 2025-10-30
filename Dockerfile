@@ -30,8 +30,7 @@ RUN aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
 RUN aws configure set default.region eu-north-1
 
 # Download model from S3 (UPDATED WITH CORRECT HASH)
-RUN aws s3 cp s3://next-mlops-california-data/dvc-store/c9/712409b0f4ca6fac2e2995488bb362 model/linear_regression_model.pkl
-
+RUN aws s3 cp s3://next-mlops-california-data/dvc-store/files/md5/c9/712409b0f4ca6fac2e2995488bb362 model/linear_regression_model.pkl
 # Expose the app port 
 EXPOSE 8000
 
