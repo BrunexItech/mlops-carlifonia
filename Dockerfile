@@ -47,10 +47,10 @@ RUN wget -q -O - https://packages.grafana.com/gpg.key | apt-key add - && \
     apt install -y grafana
 
 # Copy Prometheus config
-COPY monitoring/prometheus.yml /etc/prometheus/prometheus.yml
+COPY src/monitoring/prometheus.yml /etc/prometheus/prometheus.yml
 
 # Copy Grafana dashboard
-COPY monitoring/grafana-dashboard.json /etc/grafana/provisioning/dashboards/
+COPY src/monitoring/grafana-dashboard.json /etc/grafana/provisioning/dashboards/
 
 # Expose ports (API + Prometheus + Grafana)
 EXPOSE 8000 9090 3000
