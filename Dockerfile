@@ -25,7 +25,7 @@ COPY . .
 RUN mkdir -p model data/raw data/processed data/features data/splits logs
 
 # Install AWS CLI and configure credentials
-RUN apt update && apt install -y awscli wget gnupg
+RUN apt update && apt install -y awscli wget gnupg curl
 RUN aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
 RUN aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
 RUN aws configure set default.region eu-north-1
@@ -40,11 +40,11 @@ RUN wget https://github.com/prometheus/prometheus/releases/download/v2.37.0/prom
     mkdir -p /etc/prometheus && \
     rm -rf prometheus-*
 
-# Install Grafana
-RUN wget -q -O - https://packages.grafana.com/gpg.key | apt-key add - && \
-    echo "deb https://packages.grafana.com/oss/deb stable main" | tee -a /etc/apt/sources.list.d/grafana.list && \
-    apt update && \
-    apt install -y grafana
+# Install Grafana (UPDATED - using modern approach without apt-key)
+RUN mkdir -p /etc/apt/keyrings
+RUN curl -fsSL https://packages.grafana.com/gpg.key | gpg --dearmor -o /etc/apt/keyrings/grafana.gpg
+RUN echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://packages.grafana.com/oss/deb stable main" | tee -a /etc/apt/sources.list.d/grafana.list
+RUN apt update && apt install -y grafana
 
 # Copy Prometheus config
 COPY src/monitoring/prometheus.yml /etc/prometheus/prometheus.yml
