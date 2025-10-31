@@ -31,7 +31,15 @@ jobs:
     - name: Run ML pipeline
       run: python src/pipelines/train_pipeline.py
 
-    # STEP 5: Save the trained model
+    # STEP 5: Check for data drift and auto-retrain if needed
+    - name: Auto-retrain if drift detected
+      run: python src/pipelines/auto_retrain.py
+
+    # STEP 6: Run drift monitoring
+    - name: Monitor data drift
+      run: python src/monitoring/monitoring_drift.py
+
+    # STEP 7: Save the trained model
     - name: Save model artifact
       uses: actions/upload-artifact@v4
       with:

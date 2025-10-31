@@ -1,7 +1,10 @@
 pandas
-numpy
+numpy==1.24.3
 scikit-learn
 mlflow
 joblib
 fastapi
 uvicorn
+evidently
+prometheus_fastapi_instrumentator
+boto3

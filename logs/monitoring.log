@@ -1,0 +1,7 @@
+2025-10-31 10:00:47,094 - ERROR - ❌ Drift monitoring failed: cannot import name 'DatasetDriftMetric' from 'evidently.metrics' (/home/bruno-sharrix/Documents/mlops_boston/venv/lib/python3.10/site-packages/evidently/metrics/__init__.py)
+2025-10-31 10:02:38,443 - ERROR - ❌ Drift monitoring failed: 'Report' object has no attribute 'save_html'
+2025-10-31 10:03:58,212 - ERROR - ❌ Drift monitoring failed: 'Report' object has no attribute 'get_html'
+2025-10-31 10:55:20,804 - ERROR - ❌ Drift monitoring failed: 'Report' object has no attribute 'get_html'
+2025-10-31 10:57:20,861 - ERROR - ❌ Drift monitoring failed: 'Report' object has no attribute 'save_html'
+2025-10-31 10:58:34,146 - ERROR - ❌ Drift monitoring failed: 'Report' object has no attribute 'as_html'
+2025-10-31 11:00:18,543 - ERROR - ❌ Drift monitoring failed: 'Report' object has no attribute 'save'

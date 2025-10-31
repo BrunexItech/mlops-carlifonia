@@ -1,0 +1,15 @@
+# monitoring/prometheus.yml
+
+global:
+  scrape_interval: 15s  # How often to scrape metrics
+
+scrape_configs:
+  - job_name: 'housing-api'
+    static_configs:
+      - targets: ['localhost:8000']  # Your FastAPI endpoint
+    metrics_path: '/metrics'          # The endpoint we exposed
+    scrape_interval: 10s
+
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']   # Prometheus itself

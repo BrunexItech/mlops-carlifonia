@@ -1,0 +1,12 @@
+{
+  "dashboard": {
+    "title": "ML API Monitoring",
+    "panels": [
+      {
+        "title": "API Requests",
+        "type": "stat",
+        "targets": [{"expr": "http_requests_total"}]
+      }
+    ]
+  }
+}
